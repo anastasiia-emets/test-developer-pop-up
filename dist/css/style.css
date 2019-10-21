@@ -213,7 +213,7 @@ select {
      -moz-appearance: none;
           appearance: none;
   padding-left: 18px;
-  background: url(../../images/drop_down_icon.svg);
+  background: url(../images/drop_down_icon.svg);
   background-repeat: no-repeat;
   background-size: 12px 8px;
   background-position: 310px 15px;
@@ -328,12 +328,12 @@ form {
 }
 
 .b-popup__email {
-  background: url(../../images/email_icon.svg) no-repeat scroll 7px 14px;
+  background: url(../images/email_icon.svg) no-repeat scroll 7px 14px;
   padding-left: 14px;
 }
 
 .b-popup__icon2 {
-  background: url(../../images/user_icon.svg) no-repeat scroll 7px 14px;
+  background: url(../images/user_icon.svg) no-repeat scroll 7px 14px;
   padding-left: 14px;
 }
 
@@ -469,7 +469,7 @@ input[type="email"] {
 }
 
 .b-popup__select {
-  background: url(../../images/drop_down_icon.svg);
+  background: url(../images/drop_down_icon.svg);
   background-repeat: no-repeat;
   background-size: 12px 8px;
   background-position: 310px 15px;
