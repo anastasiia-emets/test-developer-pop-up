@@ -1,0 +1,32 @@
+.header {
+  position: absolute;
+  width: 80%;
+  height: 8vh;
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.16);
+  background-color: #629b57;
+  padding: 0 10%;
+  display: flex;
+  justify-content: space-between;
+  &__text {
+    color: #ffffff;
+    font-family: "Maven Pro", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 14px;
+  }
+  &__button {
+    border: 0;
+    background-color: #629b57;
+  }
+  &__button-close {
+    width: 19px;
+    height: 19px;
+    background-color: #629b57;
+    &:active {
+      outline: none;
+    }
+    &:hover {
+      outline: none;
+    }
+  }
+}

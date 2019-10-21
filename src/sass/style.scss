@@ -1,0 +1,16 @@
+@import "variables";
+@import "../components/header/header";
+@import "../components/main-block/main-block";
+@import "adap";
+html{
+  height: 100vh; 
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color:rgb(237, 238, 238);
+}
+
+

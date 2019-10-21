@@ -1,0 +1,23 @@
+.main-block
+    .main-block-item
+        .main-block__header Professional Сustom Service Just 
+            span for You
+        .main-block__description We can do 
+            span anything
+    .main-block-item
+        .main-block__pop-up
+            .main-block__pop-up-header Calculate the Price
+            .main-block__pop-up-text Choose level
+            select.main-block__pop-up-select
+                option Hardcore
+                option Hardcore
+                option Hardcore
+            .main-block__pop-up-text How many
+            .main-block__buttons   
+                button.main-block__minus(onClick="updatePrice()") -
+                input#input1.main-block__number(value="1" onChange="updatePrice()")
+                button.main-block__plus(onClick="updatePrice()") +
+                #input2.main-block__sum $10.99
+                a(href="javascript:PopUpShow()").main-block__modal PopUp
+    include b-popup
+    include b-popup2
