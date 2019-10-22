@@ -498,6 +498,7 @@ input[type="email"] {
 }
 
 .phone {
+
   height: 38px;
   border: 1px solid #a1a1a1;
   padding-left: 20px;
@@ -505,6 +506,15 @@ input[type="email"] {
   padding-top: 2px;
   border-left-color: #f7f5f5;
   width: 72%;
+
+  padding-left: 20px !important;
+}
+
+.b-popup__select {
+  background: url(../images/drop_down_icon.svg);
+  background-repeat: no-repeat;
+  background-size: 12px 8px;
+  background-position: 310px 15px;
 }
 
 @media (min-width: 310px) and (max-width: 1300px) {
