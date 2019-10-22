@@ -29,7 +29,8 @@ $(function () {
 });
 
 function PopUpShow() {
-    $(".b-popup").show()
+    $(".b-popup").show();
+
 }
 function PopUpHide() {
     $(".b-popup").hide();
@@ -60,8 +61,9 @@ $(document).mouseup(function (e) {
 });
 
 function PopUpShow2() {
-    $(".b-popup2").show()
     $(".b-popup").hide();
+    $(".b-popup2").show()
+
 }
 function PopUpHide2() {
     $(".b-popup2").hide();
@@ -79,29 +81,38 @@ $('form').submit(function () {
 
 });
 
+
+
+function Download() {
+    var inputs = $("#registration :input");
+
+    var obj = $.map(inputs, function (n, i) {
+        return { Key: n.name, Value: $(n).val() };
+    });
+    var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(obj));
+    var dlAnchorElem = document.getElementById('downloadAnchorElem');
+    dlAnchorElem.setAttribute("href", dataStr);
+    dlAnchorElem.setAttribute("download", "scene.json");
+    dlAnchorElem.click();
+    PopUpHide2();
+}
+
+
+$("form").on('submit', function (e) {
+    e.preventDefault();
+    $.ajax({
+        type: $(this).prop('method'),
+        url: $(this).prop('action'),
+        data: $(this).serialize()
+    }).done(function () {
+        PopUpShow2();
+    });
+});
+
 function updatePrice() {
     var price = $("#input1").val();
     var total = (parseFloat(price) + 1) * 10.99;
     console.log(total);
     $("#input2").empty()
-    $('#input2').append(total);
+    $('#input2').append(total + '$');
 };
-
-
-
-
-
-function formatState(state) {
-    if (!state.id) {
-        return state.text;
-    }
-    var baseUrl = "../images";
-    var $state = $(
-        '<span><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + state.text + '</span>'
-    );
-    return $state;
-};
-
-$(".js-example-templating").select2({
-    templateResult: formatState
-});
