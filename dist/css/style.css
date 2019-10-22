@@ -41,6 +41,8 @@
   outline: none;
 }
 
+.header__button-close:focus {
+  outline: none;
 }
 
 .main-block {
