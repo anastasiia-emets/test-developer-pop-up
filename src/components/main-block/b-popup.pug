@@ -1,18 +1,19 @@
-.b-popup
+.wrapper-popup
+    .b-popup
         a(href="javascript:PopUpHide()").b-popup__close 
             img(src="images/close_icon.svg", alt="")
         .b-popup__header Ask us how we can help you
         .b-popup__description Lorem ipsum dolor sit amet
         span.b-popup__span Enter your  name
         form(id="registration")
-            input(type="text" required minlength="3").name.b-popup__input.b-popup__icon2
+            input( type="text"  required minlength="3" pattern=".{3,}").name.b-popup__input.b-popup__icon2
             span.b-popup__span Enter your  email
-            input(type="email" required value="example@gmail.com" onkeyup="validateEmail(this)" ).b-popup__input.b-popup__email
+            input(type="email" required placeholder="example@gmail.com"  ).b-popup__input.b-popup__email
             span.b-popup__span Your phone
             .b-popup__phone
                 select.b-popup__select
                     option(value='+380') 🇺🇦
                     option(value='+375') 🇧🇾
                     option(value='+48') 🇵🇱
-                input.phone(required minlength="10").b-popup__input-number
+                input.phone(required type="text" pattern=".{9,}" ).b-popup__input-number
             button(type = 'submit').b-popup__button(onSubmit="PopUpShow2()") Continue >    

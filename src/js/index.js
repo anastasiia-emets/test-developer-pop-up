@@ -9,6 +9,7 @@ $(document).ready(function () {
 $('.name').keyup(function () {
     this.value = this.value.replace(/[^а-я0-9\.]/g, '');
 });
+
 $('.phone').keyup(function () {
     this.value = this.value.replace(/[^0-9\.]/g, '');
 });
@@ -28,23 +29,18 @@ $(function () {
     });
 });
 
+
 function PopUpShow() {
     $(".b-popup").show();
-
+    
 }
+
 function PopUpHide() {
     $(".b-popup").hide();
 }
 
-$('.b-popup__email').on('blur', function () {
-    let email = $(this).val();
-    if (email.length > 0
-        && (email.match(/.+?\@.+/g) || []).length !== 1) {
-        console.log('invalid');
-    } else {
-        console.log('valid');
-    }
-});
+
+
 
 (function () {
     $('.phone').attr("placeholder", $('.b-popup__select').val())
@@ -72,7 +68,7 @@ function PopUpHide2() {
 $('form').submit(function () {
 
     var name = $(".name").val();
-    if (name === '') {
+    if ((name === '') && (name.length < 4)) {
 
         return false;
     }
@@ -84,6 +80,7 @@ $('form').submit(function () {
 
 
 function Download() {
+    console.log('🇺🇦')
     var inputs = $("#registration :input");
 
     var obj = $.map(inputs, function (n, i) {
@@ -114,5 +111,6 @@ function updatePrice() {
     var total = (parseFloat(price) + 1) * 10.99;
     console.log(total);
     $("#input2").empty()
-    $('#input2').append(total + '$');
+    $('#input2').append('$' + total);
 };
+

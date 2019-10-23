@@ -187,15 +187,16 @@ form {
 .b-popup {
   width: 458px;
   display: flex;
-  margin-left: 15%;
-  margin-top: 150px;
-  opacity: 2;
+  margin: 0 auto;
+
+  left: 50%;
+  transform: translateX(-50%);
   box-sizing: border-box;
   height: 464px;
   flex-direction: column;
   height: 464px;
   position: absolute;
-  z-index: 100;
+  z-index: 10000;
 
   padding-left: 5%;
   padding-right: 5%;
@@ -252,7 +253,7 @@ form {
     display: flex;
     justify-content: flex-end;
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 360px;
   }
 
   &__select {
@@ -310,8 +311,8 @@ form {
   width: 458px;
   height: 343px;
   position: absolute;
-  margin-left: 100px;
-  margin-left: 15%;
+  left: 50%;
+  transform: translateX(-50%);
   margin-top: 7%;
   box-shadow: 0 10px 16px rgba(0, 0, 0, 0.24);
   background-color: #ffffff;
@@ -369,7 +370,6 @@ form {
     }
   }
   &__img-close {
-    margin-right: 20px;
     margin-bottom: -30px;
   }
 }
@@ -403,5 +403,15 @@ input[type="email"] {
   padding-bottom: 0;
   padding-top: 2px;
   border-left-color: #f7f5f5;
-  width: 72%;
+  width: 80%;
+}
+.b-popup2__close {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+.b-popup__phone {
+  display: flex;
+  width: 100%;
 }
