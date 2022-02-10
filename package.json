@@ -13,7 +13,7 @@
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.0.2",
     "micromodal": "^0.4.2",
-    "node-sass": "^4.10.0",
+    "node-sass": "^7.0.0",
     "pug": "^2.0.3",
     "run-sequence": "^2.2.1",
     "sass": "^1.15.1"
